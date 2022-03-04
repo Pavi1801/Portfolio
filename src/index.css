@@ -1,13 +1,362 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica, sans-serif;
+  color:#444;
+}
+.dark {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #1f2336;
+}
+.dark .about-center button,.dark .contact button{
+  border: 1px solid #b8b4ce;
+  background-color: #2978b5;
+  color:rgb(243, 237, 237);
+  background: linear-gradient(to right,#b8b4ce 50%, #2978b5 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  text-decoration: none;
+}
+.dark .about-center button:hover,.dark .contact button:hover{
+  background-position: left bottom;
+  color: #2978b5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark h1,.dark h3,.dark p,.dark a,.dark h2,.dark h6{
+  color: #b8b4ce;
+}
+.dark .project-1 .languages div {
+  color: #b8b4ce;
+}
+
+.dark .project-1{
+  box-shadow:rgba(198, 198, 214, 0.2) 0px 7px 29px 0px;
+}
+.dark .box{
+  box-shadow:rgba(198, 198, 214, 0.2) 0px 7px 29px 0px;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 1180px;
+  max-width: 95%;
+  height: 7em;
+  margin: 0 auto;
+  
+}
+.header h1 a{
+  color:#2978b5;
+  font-size: 2.2rem;  
+  position: relative; 
+  text-decoration: none;                             
+}
+.header h1 a::after{
+  content: "";
+  position: absolute;
+  text-decoration: underline;
+  width: 0px;
+  left:0px;
+  bottom: 0px;
+  height: 3px;
+  background-color:#2978b5 ;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header h1 a:hover::after{
+  width:100%;
+}
+.header .links {
+  margin-left: auto;
+  font-size: 1.25rem;
+}
+.header a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  position: relative; 
+}
+.header a::after{
+  content: "";
+  position: absolute;
+  text-decoration: underline;
+  width: 0px;
+  left:0px;
+  bottom: 0px;
+  height: 3px;
+  background-color:#2978b5 ;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header a:hover::after{
+  width:100%;
+}
+.header a:hover{
+  color:#2978b5;
+}  
+
+.header span{
+  border: 0;
+  margin-left: 16px;
+  text-decoration: none;
+}
+.header span:hover{
+  color: #2978b5;
+  cursor: pointer;
+} 
+.about-center{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.about-center h1{
+line-height: 1.2em;
+font-size: 2.9rem;
+margin: 1rem;
+}
+.about-center span{
+  color:#2978b5 ;
+}
+
+.about-center h2{
+  font-size: 2rem;
+  line-height: 0.9em;
+  margin: 0.7rem;
+}
+.about-center p{
+  margin: 1rem;
+  max-width: 650px;
+  font-size: 1.4rem;
+  align-items: center;
+}
+.about-contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  max-width: 400px;
+}
+.about-center a{
+margin: 0.5rem;
+text-decoration: none;
+position: relative;
+}
+.about-center a::after{
+  content: "";
+  position: absolute;
+  text-decoration: underline;
+  width: 0px;
+  left:0px;
+  bottom: 0px;
+  height: 3px;
+  background-color:#2978b5 ;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about-center a:hover::after{
+  width: 100%;
+}
+
+.about-center button{
+  border: 1px solid #2978b5;
+  color: #2978b5;
+  width: 90px;
+  height: 40px;
+  background-color: white;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  background: linear-gradient(to right,#2978b5 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.about-center button:hover{
+  background-position: left bottom;
+  color: white;
+}
+.project{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1180px;
+  max-width: 95%;
+  padding: 32px;
+  margin: 0 auto;
+}
+.project h1{
+  margin: 1rem;
+  margin-top:0;
+}
+.project-discription{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin: 1rem;
+}
+.project-1{
+  width: 330px;
+  height: 300px;
+  border: 1px solid #f2f2f2;
+  box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-1 h1{
+  max-height: 75px;
+}
+.project-1 p{
+  max-width: 280px;
+  max-height: 125px;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+.languages div{
+padding: 10px;
+}
+
+.github-links a{
+  padding: 10px;
+ text-decoration: none;
+ position: relative;
+}
+.github-links a::after{
+  content: "";
+  position: absolute;
+  text-decoration: underline;
+  width: 0px;
+  left:0px;
+  bottom: 0px;
+  height: 3px;
+  background-color:#2978b5 ;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.github-links a:hover::after{
+  width: 100%;
+}
+.skillss{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  max-width: 95%;
+  padding: 40px;
+  margin: 0 auto;
+}
+.skillss h1{
+  margin: 1rem;
+}
+
+.lang{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.2rem;
+  margin: 1rem;
+}
+.box{
+  width: 90px;
+  height: 40px;
+  border: 1px solid #f2f2f2;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  max-width: 95%;
+  padding: 40px;
+  margin: 0 auto;
+}
+.contact h1{
+    margin: 1rem;
+  }
+.contact button{
+  width:100px;
+  border: 1px solid #2978b5;
+  color: #2978b5;
+  height: 40px;
+  background-color: white;
+  font-size: 1.2rem;
+  margin: 1rem;
+
+  background: linear-gradient(to right,#2978b5 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+
+}
+.contact button:hover{
+  background-position: left bottom;
+  color: white;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.footer h1{
+  margin: 3rem;
+  font-size: 1.5rem;
+  color: #2978b5;
+}
+.footer a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 750px){
+  .project-discription {
+    display: grid;
+    grid-template-columns: 1fr;  
+  }
+  .about-center h1 span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-center h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
