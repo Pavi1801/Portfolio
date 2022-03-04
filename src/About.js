@@ -4,8 +4,7 @@ function About() {
     return (
         <div className="about-center">
             <h1>
-                Hi, I am
-                <span > Pavithra Yadavar</span>
+                Hi, I am <span > Pavithra </span> <span>Yadavar</span>
             </h1>
             <h2>A Front End Engineer</h2>
             <p>
