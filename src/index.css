@@ -2,6 +2,7 @@
   margin: 0;
   font-family: Helvetica, sans-serif;
   color:#444;
+  scroll-behavior: smooth;
 }
 .dark {
   margin: 0;
