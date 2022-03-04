@@ -41,15 +41,16 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  width: 1180px;
-  max-width: 95%;
   height: 7em;
   margin: 0 auto;
   
 }
 .header h1 a{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   color:#2978b5;
-  font-size: 2.2rem;  
+  font-size: 2.3rem;  
   position: relative; 
   text-decoration: none;                             
 }
@@ -69,11 +70,14 @@
   width:100%;
 }
 .header .links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   margin-left: auto;
   font-size: 1.25rem;
 }
 .header a {
-  margin-left: 16px;
+  margin-left: 13px;
   text-decoration: none;
   padding: 6px;
   position: relative; 
@@ -97,12 +101,11 @@
   color:#2978b5;
 }  
 
-.header .toggle span{
-  border: 0;
-  margin-left: 16px;
+.header span{
   text-decoration: none;
 }
-.header .toggle span:hover{
+
+.header span:hover{
   color: #2978b5;
   cursor: pointer;
 } 
@@ -136,6 +139,7 @@ margin: 1rem;
   max-width: 650px;
   font-size: 1.4rem;
   align-items: center;
+  text-align: center;
 }
 .about-contact{
   display: flex;
@@ -183,6 +187,7 @@ position: relative;
 .about-center button:hover{
   background-position: left bottom;
   color: white;
+  cursor: pointer;
 }
 .project{
   display: flex;
@@ -325,6 +330,7 @@ padding: 10px;
 .contact button:hover{
   background-position: left bottom;
   color: white;
+  cursor: pointer;
 }
 .footer {
   display: flex;
@@ -356,5 +362,11 @@ padding: 10px;
   }
   .footer h1{
     font-size: 1.2rem;
+  }
+  .about-center h2{
+    font-size: 1.5rem;
+  }
+  .header a{
+    margin-left: 0px;
   }
 }
